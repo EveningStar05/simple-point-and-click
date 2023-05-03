@@ -1,18 +1,27 @@
 {
     "Red Pepper": {
-        "texture-path": "res://Assets/Texture/KATFOOD ADVENTURE/katfood_adventure_v08f_1x.png",
+        "texture-path": "res://Assets/Texture/KATFOOD ADVENTURE/Individual PNG/red-pepper.png",
         "craftable-item": {
-            "item-name": "Light-Bulb",
-            "combine-item-result": "Magnifyer"
+            "item-name": "Ruby",
+            "combine-item-result": "Key"
         },
-        "description": ["This is a magical bucket."]
+        "description": ["This is a red pepper."]
     },
     "Ruby" :{
-        "texture-path": "res://Assets/Texture/KATFOOD ADVENTURE/katfood_adventure_v08f_1x.png",
+        "texture-path": "res://Assets/Texture/KATFOOD ADVENTURE/Individual PNG/red-ruby.png",
         "craftable-item": {
-            "item-name": "Bucket",
-            "combine-item-result": "Magnifyer"
+            "item-name": "Red Pepper",
+            "combine-item-result": "Key"
         },
-        "description": ["This is a light bulb."]
+        "description": ["This is a shiny red ruby."]
+    },
+
+    "Key": {
+        "texture-path": "res://Assets/Texture/KATFOOD ADVENTURE/Individual PNG/key.png",
+        "craftable-item": {
+            "item-name": "",
+            "combine-item-result": ""
+        },
+        "description": ["This is a magical key!"]
     }
 }

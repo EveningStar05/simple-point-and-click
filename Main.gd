@@ -14,21 +14,7 @@ func _on_start_dialog(item_name):
 	canvas_layer.add_child(dialog_box)
 	dialog_box.set_dialog(item_name)
 	
-func _process(delta):
-#	TODO:
-#		If the dialog starts, pause the player.
-#		until the tween animation finished playing then player can move again
-#		and remove the dialog box.
+func _process(_delta):
 	if player.moving and is_instance_valid(dialog_box):
 		if dialog_box.is_inside_tree():
 			canvas_layer.remove_child(dialog_box)
-#	dialog_start()
-			
-#func dialog_start():
-#	if Global.dialog_start:
-#		player.set_physics_process(true)
-#	else:
-#		player.set_physics_process(false)
-#		if player.moving and is_instance_valid(dialog_box):
-#			if dialog_box.is_inside_tree():
-#				canvas_layer.remove_child(dialog_box)

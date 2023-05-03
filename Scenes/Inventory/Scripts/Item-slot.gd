@@ -11,25 +11,23 @@ func _gui_input(event) -> void: # detecting mouse clicks, for inspecting item
 		if event.doubleclick: # double click item to inspect
 			emit_signal("inspect_item", item_index)
 	
-func _on_display_item_to_inventory(index: int, texture_path, texture_region) -> void: # sets the display
+func _on_display_item_to_inventory(index: int, texture_path) -> void: # sets the display
 	var slot_list = get_tree().get_nodes_in_group("slots")
 	
 	if texture_path != null: # craft and add item
 		var load_texture = load(texture_path)
-		slot_list[index].get_node("Item").texture.set_atlas(load_texture)
-		slot_list[index].get_node("Item").texture.set_region(texture_region)
+		slot_list[index].get_node("Item").set_texture(load_texture)
 	else: # removing item from slot display
-		slot_list[index].get_node("Item").texture.set_atlas(null)
+		slot_list[index].get_node("Item").set_texture(texture_path)
 
 func get_drag_data(_position: Vector2): # get the selected item data
 	var data = {} # passing the data to the other 2 function
-	var get_current_index = get_index()
-
-	data["origin_node"] = self
-	data["origin_node_index"] = get_current_index
+	
+	data["origin_node"] = get_parent()
+	data["origin_node_index"] = data["origin_node"].get_index()
 	
 	if self != null and self.texture != null: # if the slot is not empty
-		data["origin-item-name"] = Inventory.inventory_list[get_current_index]
+		data["origin-item-name"] = Inventory.inventory_list[data["origin_node_index"]]
 		data["origin_texture"] = texture
 		
 		var texture_node = TextureRect.new() # create a new texture node for drag preview
@@ -51,33 +49,24 @@ func get_drag_data(_position: Vector2): # get the selected item data
 	return data
 
 func can_drop_data(_position, data): # checks wether this item can be drop at this particular slot
-	
-	var target_slot = self
-	var target_index = get_index()
 
-	data["target_slot"] = target_slot
-	data["target_slot_index"] = target_index
+	data["target_slot"] = get_parent()
+	data["target_slot_index"] = data["target_slot"].get_index()
 	
-	if target_slot.texture == null: # if the target slot is empty, we're moving the item.
+	if data["target_slot"].texture == null: # if the target slot is empty, we're moving the item.
 		data["target_item_name"] = null
 		data["target_texture"] = texture 
 	else:
-		data["target_item_name"] = Inventory.inventory_list[target_index] # set the target name from the inventory list
+		data["target_item_name"] = Inventory.inventory_list[data["target_slot_index"]] # set the target name from the inventory list
 		data["target_texture"] = texture
-		
-	if ImportData.item_list.keys().has(data["origin-item-name"]): # if the draggable data exist in the dictionary
-		if ImportData.item_list[data["origin-item-name"]]["craftable-item"]["item-name"] == data["target_item_name"]:# if the drag data is equal to the target item.
+
+	if Inventory.item_data.has(data["origin-item-name"]): # if the draggable data exist in the dictionary
+		if Inventory.item_data[data["origin-item-name"]]["craftable-item"]["item-name"] == data["target_item_name"]:
 			return true
 		else:
 			return false
 	
 func drop_data(_position, data): # drop the item to the slot
-	if data["target_slot"].texture == null: # if the next slot is empty we are moving the item
-		texture = data["origin_texture"] # set the target slot to the selected item texture
-		data["origin_node"].texture = null # then reset the previous slot texture to null, because we're just moving the item
-	else: # swapping the item here
-		texture = data["origin_texture"]
-		data["origin_node"].texture = data["target_texture"]
 	
 	var new_item = Inventory.craft_item(data["origin_node_index"], data["target_slot_index"])
 	
