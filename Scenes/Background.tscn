@@ -1,0 +1,192 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Assets/Texture/Pixel Art Platformer - Village Props/Texture/TX Tileset Ground Darken.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Objects/Well.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Objects/Tree.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Objects/Statue.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Objects/Red Pepper.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Objects/Ruby.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/Texture/Pixel Art Platformer - Village Props v2.1.0/Texture/TX Village Props.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/Objects/Unmarked-grave.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Objects/Camp Fire.tscn" type="PackedScene" id=9]
+
+[sub_resource type="TileSet" id=1]
+resource_local_to_scene = true
+0/name = "TX Tileset Ground Darken.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 32, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "TX Tileset Ground Darken.png 1"
+1/texture = ExtResource( 1 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 32, 0, 32, 32 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "TX Tileset Ground Darken.png 2"
+2/texture = ExtResource( 1 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 64, 0, 32, 32 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "TX Tileset Ground Darken.png 3"
+3/texture = ExtResource( 1 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 96, 0, 32, 32 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "TX Tileset Ground Darken.png 4"
+4/texture = ExtResource( 1 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 32, 32, 32 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "TX Tileset Ground Darken.png 5"
+5/texture = ExtResource( 1 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 32, 32, 32, 32 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "TX Tileset Ground Darken.png 6"
+6/texture = ExtResource( 1 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 64, 32, 32, 32 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+
+[node name="Garden" type="Node2D"]
+scale = Vector2( 1.5, 1.5 )
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( -334.667, -444.667 )
+tile_set = SubResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 1966088, 0, 0, 1966089, 1, 0, 1966090, 1, 0, 1966091, 1, 0, 1966092, 1, 0, 1966093, 1, 0, 1966094, 1, 0, 1966095, 1, 0, 1966096, 1, 0, 1966097, 1, 0, 1966098, 1, 0, 1966099, 1, 0, 1966100, 1, 0, 1966101, 1, 0, 1966102, 1, 0, 1966103, 1, 0, 1966104, 1, 0, 1966105, 1, 0, 1966106, 1, 0, 1966107, 1, 0, 1966108, 1, 0, 1966109, 1, 0, 1966110, 1, 0, 1966111, 1, 0, 1966112, 1, 0, 1966113, 1, 0, 1966114, 1, 0, 1966115, 1, 0, 1966116, 1, 0, 1966117, 1, 0, 1966118, 1, 0, 1966119, 1, 0, 1966120, 1, 0, 1966121, 1, 0, 1966122, 1, 0, 1966123, 1, 0, 1966124, 1, 0, 1966125, 1, 0, 1966126, 1, 0, 1966127, 1, 0, 1966128, 1, 0, 1966129, 1, 0, 1966130, 1, 0, 1966131, 1, 0, 1966132, 1, 0, 1966133, 1, 0, 1966134, 1, 0, 1966135, 1, 0, 1966136, 1, 0, 1966137, 1, 0, 1966138, 1, 0, 1966139, 1, 0, 1966140, 1, 0, 1966141, 1, 0, 1966142, 1, 0, 1966143, 1, 0, 1966144, 1, 0, 1966145, 1, 0, 1966146, 1, 0, 1966147, 2, 0, 2031624, 4, 0, 2031625, 5, 0, 2031626, 5, 0, 2031627, 5, 0, 2031628, 5, 0, 2031629, 5, 0, 2031630, 5, 0, 2031631, 5, 0, 2031632, 5, 0, 2031633, 5, 0, 2031634, 5, 0, 2031635, 5, 0, 2031636, 5, 0, 2031637, 5, 0, 2031638, 5, 0, 2031639, 5, 0, 2031640, 5, 0, 2031641, 5, 0, 2031642, 5, 0, 2031643, 5, 0, 2031644, 5, 0, 2031645, 5, 0, 2031646, 5, 0, 2031647, 5, 0, 2031648, 5, 0, 2031649, 5, 0, 2031650, 5, 0, 2031651, 5, 0, 2031652, 5, 0, 2031653, 5, 0, 2031654, 5, 0, 2031655, 5, 0, 2031656, 5, 0, 2031657, 5, 0, 2031658, 5, 0, 2031659, 5, 0, 2031660, 5, 0, 2031661, 5, 0, 2031662, 5, 0, 2031663, 5, 0, 2031664, 5, 0, 2031665, 5, 0, 2031666, 5, 0, 2031667, 5, 0, 2031668, 5, 0, 2031669, 5, 0, 2031670, 5, 0, 2031671, 5, 0, 2031672, 5, 0, 2031673, 5, 0, 2031674, 5, 0, 2031675, 5, 0, 2031676, 5, 0, 2031677, 5, 0, 2031678, 5, 0, 2031679, 5, 0, 2031680, 5, 0, 2031681, 5, 0, 2031682, 5, 0, 2031683, 6, 0, 2097160, 4, 0, 2097161, 5, 0, 2097162, 5, 0, 2097163, 5, 0, 2097164, 5, 0, 2097165, 5, 0, 2097166, 5, 0, 2097167, 5, 0, 2097168, 5, 0, 2097169, 5, 0, 2097170, 5, 0, 2097171, 5, 0, 2097172, 5, 0, 2097173, 5, 0, 2097174, 5, 0, 2097175, 5, 0, 2097176, 5, 0, 2097177, 5, 0, 2097178, 5, 0, 2097179, 5, 0, 2097180, 5, 0, 2097181, 5, 0, 2097182, 5, 0, 2097183, 5, 0, 2097184, 5, 0, 2097185, 5, 0, 2097186, 5, 0, 2097187, 5, 0, 2097188, 5, 0, 2097189, 5, 0, 2097190, 5, 0, 2097191, 5, 0, 2097192, 5, 0, 2097193, 5, 0, 2097194, 5, 0, 2097195, 5, 0, 2097196, 5, 0, 2097197, 5, 0, 2097198, 5, 0, 2097199, 5, 0, 2097200, 5, 0, 2097201, 5, 0, 2097202, 5, 0, 2097203, 5, 0, 2097204, 5, 0, 2097205, 5, 0, 2097206, 5, 0, 2097207, 5, 0, 2097208, 5, 0, 2097209, 5, 0, 2097210, 5, 0, 2097211, 5, 0, 2097212, 5, 0, 2097213, 5, 0, 2097214, 5, 0, 2097215, 5, 0, 2097216, 5, 0, 2097217, 5, 0, 2097218, 5, 0, 2097219, 6, 0, 2162696, 4, 0, 2162697, 5, 0, 2162698, 5, 0, 2162699, 5, 0, 2162700, 5, 0, 2162701, 5, 0, 2162702, 5, 0, 2162703, 5, 0, 2162704, 5, 0, 2162705, 5, 0, 2162706, 5, 0, 2162707, 5, 0, 2162708, 5, 0, 2162709, 5, 0, 2162710, 5, 0, 2162711, 5, 0, 2162712, 5, 0, 2162713, 5, 0, 2162714, 5, 0, 2162715, 5, 0, 2162716, 5, 0, 2162717, 5, 0, 2162718, 5, 0, 2162719, 5, 0, 2162720, 5, 0, 2162721, 5, 0, 2162722, 5, 0, 2162723, 5, 0, 2162724, 5, 0, 2162725, 5, 0, 2162726, 5, 0, 2162727, 5, 0, 2162728, 5, 0, 2162729, 5, 0, 2162730, 5, 0, 2162731, 5, 0, 2162732, 5, 0, 2162733, 5, 0, 2162734, 5, 0, 2162735, 5, 0, 2162736, 5, 0, 2162737, 5, 0, 2162738, 5, 0, 2162739, 5, 0, 2162740, 5, 0, 2162741, 5, 0, 2162742, 5, 0, 2162743, 5, 0, 2162744, 5, 0, 2162745, 5, 0, 2162746, 5, 0, 2162747, 5, 0, 2162748, 5, 0, 2162749, 5, 0, 2162750, 5, 0, 2162751, 5, 0, 2162752, 5, 0, 2162753, 5, 0, 2162754, 5, 0, 2162755, 6, 0, 2228232, 4, 0, 2228233, 5, 0, 2228234, 5, 0, 2228235, 5, 0, 2228236, 5, 0, 2228237, 5, 0, 2228238, 5, 0, 2228239, 5, 0, 2228240, 5, 0, 2228241, 5, 0, 2228242, 5, 0, 2228243, 5, 0, 2228244, 5, 0, 2228245, 5, 0, 2228246, 5, 0, 2228247, 5, 0, 2228248, 5, 0, 2228249, 5, 0, 2228250, 5, 0, 2228251, 5, 0, 2228252, 5, 0, 2228253, 5, 0, 2228254, 5, 0, 2228255, 5, 0, 2228256, 5, 0, 2228257, 5, 0, 2228258, 5, 0, 2228259, 5, 0, 2228260, 5, 0, 2228261, 5, 0, 2228262, 5, 0, 2228263, 5, 0, 2228264, 5, 0, 2228265, 5, 0, 2228266, 5, 0, 2228267, 5, 0, 2228268, 5, 0, 2228269, 5, 0, 2228270, 5, 0, 2228271, 5, 0, 2228272, 5, 0, 2228273, 5, 0, 2228274, 5, 0, 2228275, 5, 0, 2228276, 5, 0, 2228277, 5, 0, 2228278, 5, 0, 2228279, 5, 0, 2228280, 5, 0, 2228281, 5, 0, 2228282, 5, 0, 2228283, 5, 0, 2228284, 5, 0, 2228285, 5, 0, 2228286, 5, 0, 2228287, 5, 0, 2228288, 5, 0, 2228289, 5, 0, 2228290, 5, 0, 2228291, 6, 0, 2293768, 4, 0, 2293769, 5, 0, 2293770, 5, 0, 2293771, 5, 0, 2293772, 5, 0, 2293773, 5, 0, 2293774, 5, 0, 2293775, 5, 0, 2293776, 5, 0, 2293777, 5, 0, 2293778, 5, 0, 2293779, 5, 0, 2293780, 5, 0, 2293781, 5, 0, 2293782, 5, 0, 2293783, 5, 0, 2293784, 5, 0, 2293785, 5, 0, 2293786, 5, 0, 2293787, 5, 0, 2293788, 5, 0, 2293789, 5, 0, 2293790, 5, 0, 2293791, 5, 0, 2293792, 5, 0, 2293793, 5, 0, 2293794, 5, 0, 2293795, 5, 0, 2293796, 5, 0, 2293797, 5, 0, 2293798, 5, 0, 2293799, 5, 0, 2293800, 5, 0, 2293801, 5, 0, 2293802, 5, 0, 2293803, 5, 0, 2293804, 5, 0, 2293805, 5, 0, 2293806, 5, 0, 2293807, 5, 0, 2293808, 5, 0, 2293809, 5, 0, 2293810, 5, 0, 2293811, 5, 0, 2293812, 5, 0, 2293813, 5, 0, 2293814, 5, 0, 2293815, 5, 0, 2293816, 5, 0, 2293817, 5, 0, 2293818, 5, 0, 2293819, 5, 0, 2293820, 5, 0, 2293821, 5, 0, 2293822, 5, 0, 2293823, 5, 0, 2293824, 5, 0, 2293825, 5, 0, 2293826, 5, 0, 2293827, 6, 0, 2359304, 4, 0, 2359305, 5, 0, 2359306, 5, 0, 2359307, 5, 0, 2359308, 5, 0, 2359309, 5, 0, 2359310, 5, 0, 2359311, 5, 0, 2359312, 5, 0, 2359313, 5, 0, 2359314, 5, 0, 2359315, 5, 0, 2359316, 5, 0, 2359317, 5, 0, 2359318, 5, 0, 2359319, 5, 0, 2359320, 5, 0, 2359321, 5, 0, 2359322, 5, 0, 2359323, 5, 0, 2359324, 5, 0, 2359325, 5, 0, 2359326, 5, 0, 2359327, 5, 0, 2359328, 5, 0, 2359329, 5, 0, 2359330, 5, 0, 2359331, 5, 0, 2359332, 5, 0, 2359333, 5, 0, 2359334, 5, 0, 2359335, 5, 0, 2359336, 5, 0, 2359337, 5, 0, 2359338, 5, 0, 2359339, 5, 0, 2359340, 5, 0, 2359341, 5, 0, 2359342, 5, 0, 2359343, 5, 0, 2359344, 5, 0, 2359345, 5, 0, 2359346, 5, 0, 2359347, 5, 0, 2359348, 5, 0, 2359349, 5, 0, 2359350, 5, 0, 2359351, 5, 0, 2359352, 5, 0, 2359353, 5, 0, 2359354, 5, 0, 2359355, 5, 0, 2359356, 5, 0, 2359357, 5, 0, 2359358, 5, 0, 2359359, 5, 0, 2359360, 5, 0, 2359361, 5, 0, 2359362, 5, 0, 2359363, 6, 0 )
+
+[node name="Tree" parent="." instance=ExtResource( 3 )]
+position = Vector2( 432.667, 435.333 )
+
+[node name="Tree2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 581.667, 436 )
+
+[node name="Tree3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 226.667, 436 )
+
+[node name="Tree4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 100.667, 436 )
+
+[node name="Tree5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 798.667, 436 )
+
+[node name="Tree6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1126.67, 436 )
+
+[node name="Tree7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1615.67, 436 )
+
+[node name="Table" type="Sprite" parent="."]
+position = Vector2( 1280.5, 502.667 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 315, 196, 73, 28 )
+
+[node name="Chair" type="Sprite" parent="."]
+position = Vector2( 1231.33, 498 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 394, 188, 22, 36 )
+
+[node name="Chair2" type="Sprite" parent="."]
+position = Vector2( 1330.67, 497.333 )
+texture = ExtResource( 7 )
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 394, 188, 22, 36 )
+
+[node name="Grave" type="Sprite" parent="."]
+position = Vector2( 635.333, 504 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 447, 167, 34, 25 )
+
+[node name="Grave2" type="Sprite" parent="."]
+position = Vector2( 760.667, 504 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 447, 167, 34, 25 )
+
+[node name="Camp Fire" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1438, 504 )
+
+[node name="Red Pepper" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1281.33, 466.667 )
+
+[node name="Ruby" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1592.67, 498 )
+
+[node name="Statue" parent="." instance=ExtResource( 4 )]
+position = Vector2( 967.333, 474 )
+
+[node name="Unmarked Grave" parent="." instance=ExtResource( 8 )]
+position = Vector2( 695.333, 492.667 )
+
+[node name="Well" parent="." instance=ExtResource( 2 )]
+position = Vector2( 328, 470.667 )

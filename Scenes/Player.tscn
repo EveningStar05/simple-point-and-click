@@ -1,0 +1,64 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Assets/Texture/maytch-maria-holic-kanako-character-sprite-32x64/spr_kanako_walk_32x64_4-frames.png" type="Texture" id=1]
+[ext_resource path="res://Player.gd" type="Script" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 11.5
+height = 29.0
+
+[sub_resource type="CircleShape2D" id=5]
+radius = 20.1556
+
+[sub_resource type="Animation" id=4]
+length = 0.001
+loop = true
+
+[sub_resource type="Animation" id=3]
+resource_name = "spin"
+
+[sub_resource type="Animation" id=2]
+resource_name = "walk"
+length = 0.5
+loop = true
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[node name="Player" type="KinematicBody2D"]
+scale = Vector2( 2, 2 )
+collision_mask = 2
+collision/safe_margin = 0.001
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+hframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -1.5, 8.5 )
+shape = SubResource( 1 )
+
+[node name="PlayerRadar" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerRadar"]
+position = Vector2( 12, 14 )
+shape = SubResource( 5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Sprite")
+anims/RESET = SubResource( 4 )
+anims/spin = SubResource( 3 )
+anims/walk = SubResource( 2 )

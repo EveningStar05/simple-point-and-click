@@ -1,0 +1,14 @@
+{
+    "Well": {
+        "text" : ["This is a wishing well. Make a wish!", "Maybe just maybe you're wish will come true."]
+    },
+    "Statue": {
+        "text": ["It's a statue of Mother Mary. I should pray for her."]
+    },
+    "Camp Fire":{
+        "text": ["Someone made a camp fire!", "It's still warm, I wonder if they are still around here.", "Ah feels so nice."]
+    },
+    "Unmarked Grave": {
+        "text": ["An unmarked grave...", "Rest in peace to whoever this perosn is."]
+    }
+}

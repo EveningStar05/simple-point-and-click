@@ -1,0 +1,18 @@
+{
+    "Red Pepper": {
+        "texture-path": "res://Assets/Texture/KATFOOD ADVENTURE/katfood_adventure_v08f_1x.png",
+        "craftable-item": {
+            "item-name": "Light-Bulb",
+            "combine-item-result": "Magnifyer"
+        },
+        "description": ["This is a magical bucket."]
+    },
+    "Ruby" :{
+        "texture-path": "res://Assets/Texture/KATFOOD ADVENTURE/katfood_adventure_v08f_1x.png",
+        "craftable-item": {
+            "item-name": "Bucket",
+            "combine-item-result": "Magnifyer"
+        },
+        "description": ["This is a light bulb."]
+    }
+}

@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scenes/Objects/base-item.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Texture/KATFOOD ADVENTURE/katfood_adventure_v08f_1x.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Objects/InteractiveItem.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/UI/Icons/AddItem.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/UI/Scripts/interaction-icon.gd" type="Script" id=5]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 54.037
+
+[node name="Red Pepper" instance=ExtResource( 1 )]
+scale = Vector2( 0.5, 0.5 )
+collision_layer = 2
+script = ExtResource( 5 )
+item_type = "pickable"
+
+[node name="Sprite" parent="." index="0"]
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 56, 480, 64, 88 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
+position = Vector2( 57, -479 )
+polygon = PoolVector2Array( -56, 437, -64, 446, -64, 452, -67, 451, -78, 451, -87, 459, -88, 459, -88, 516, -78, 523, -78, 524, -55, 522, -55, 519, -50, 523, -50, 524, -31, 523, -28, 523, -24, 519, -24, 456, -31, 451, -38, 451, -37, 438, -37, 436, -56, 436 )
+
+[node name="Interaction" parent="." index="2" instance=ExtResource( 3 )]
+collision_mask = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction" index="0"]
+shape = SubResource( 1 )
+
+[node name="Icon" parent="." index="3" instance=ExtResource( 4 )]
+visible = false
+margin_left = -20.0
+margin_top = -22.0
+margin_right = -20.0
+margin_bottom = -22.0
+mouse_filter = 0
+
+[node name="Tween" type="Tween" parent="." index="4"]
