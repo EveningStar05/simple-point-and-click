@@ -10,6 +10,7 @@ use_filter = true
 font_data = ExtResource( 3 )
 
 [node name="DialogBoxPlayer" type="Control"]
+pause_mode = 2
 anchor_left = 0.5
 anchor_right = 0.5
 mouse_filter = 2

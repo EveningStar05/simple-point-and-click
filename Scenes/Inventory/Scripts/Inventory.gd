@@ -1,9 +1,10 @@
 extends Node
 
-#TODO:
-#	Adjust the script to the current project.
-#	Connecting with interaction system -> adding items to the inventory.
-#	adjust the jason file values to the current project. using rhe current assets
+#	TODO:
+#	Fix extend_slot
+#	Fix inspect item:
+#		create the panel
+#		fix the code.
 
 # Inventory features:
 # 1. Add item: players can add item to the inventory
@@ -58,10 +59,3 @@ func craft_item(item_index: int, target_item_index: int) -> String: # item_index
 func remove_item(item_index: int):
 	inventory_list[item_index] = null
 	emit_signal("display_item_to_inventory", item_index, null)
-	
-func swap_item(item_index: int, target_item_index: int) -> void: # item_index: data[origin-item-index], target_item_index: data[target_item_index]
-	var targetItem = inventory_list[target_item_index]
-	var current_item = inventory_list[item_index]
-	
-	inventory_list[item_index] = targetItem
-	inventory_list[target_item_index] = current_item

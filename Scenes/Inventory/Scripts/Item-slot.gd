@@ -6,9 +6,9 @@ func _ready() -> void:
 	Inventory.connect("display_item_to_inventory", self, "_on_display_item_to_inventory")
 		
 func _gui_input(event) -> void: # detecting mouse clicks, for inspecting item
-	var item_index = get_index()
+	var item_index = get_parent().get_index()
 	if event is InputEventMouseButton:
-		if event.doubleclick: # double click item to inspect
+		if event.doubleclick and self.texture != null: # double click item to inspect
 			emit_signal("inspect_item", item_index)
 	
 func _on_display_item_to_inventory(index: int, texture_path) -> void: # sets the display
@@ -26,7 +26,7 @@ func get_drag_data(_position: Vector2): # get the selected item data
 	data["origin_node"] = get_parent()
 	data["origin_node_index"] = data["origin_node"].get_index()
 	
-	if self != null and self.texture != null: # if the slot is not empty
+	if self.texture != null: # if the slot is not empty
 		data["origin-item-name"] = Inventory.inventory_list[data["origin_node_index"]]
 		data["origin_texture"] = texture
 		
@@ -52,13 +52,8 @@ func can_drop_data(_position, data): # checks wether this item can be drop at th
 
 	data["target_slot"] = get_parent()
 	data["target_slot_index"] = data["target_slot"].get_index()
-	
-	if data["target_slot"].texture == null: # if the target slot is empty, we're moving the item.
-		data["target_item_name"] = null
-		data["target_texture"] = texture 
-	else:
-		data["target_item_name"] = Inventory.inventory_list[data["target_slot_index"]] # set the target name from the inventory list
-		data["target_texture"] = texture
+	data["target_item_name"] = Inventory.inventory_list[data["target_slot_index"]] # set the target name from the inventory list
+	data["target_texture"] = texture
 
 	if Inventory.item_data.has(data["origin-item-name"]): # if the draggable data exist in the dictionary
 		if Inventory.item_data[data["origin-item-name"]]["craftable-item"]["item-name"] == data["target_item_name"]:

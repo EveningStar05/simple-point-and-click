@@ -8,11 +8,7 @@ var moving = false
 
 onready var camera2d = $Camera2D
 onready var animation_player = $AnimationPlayer
-var item_interaction = null
 
-func _ready():
-	$PlayerRadar.connect("body_entered", self, "_on_body_entered")
-	$PlayerRadar.connect("body_exited", self, "_on_body_exited")
 	
 func _unhandled_input(event):
 	if event is InputEventMouseButton and event.is_action_pressed("click"):
@@ -26,19 +22,9 @@ func _physics_process(delta):
 		position = position.move_toward(destination, delta * speed)
 	else:
 		moving = false
-		
-#	===================================================
-#	TODO:
-#		add clamp: limit is on the edges of the tilemap
-#	===================================================
-
+	
+	# flipping the character.
 	if target.x < position.x:
 		scale.x = scale.y * -1
 	elif target.x > position.x:
 		scale.x = scale.y * 1
-		
-func _on_body_entered(body):
-	item_interaction = body
-	
-func _on_body_exited(_body):
-	item_interaction = null

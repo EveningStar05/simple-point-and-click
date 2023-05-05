@@ -1,5 +1,7 @@
 extends Control
 
+var inspect_item_window = preload("res://Scenes/Inventory/Item_Description/Item-description-base.tscn").instance()
+
 # Nodes
 onready var main_node = get_parent() # World
 onready var panel = get_node("Background")
@@ -11,6 +13,19 @@ onready var slot_item = get_tree().get_nodes_in_group("slots")
 
 func _ready():
 	panel.hide()
+	for slots in slot_item:
+		slots.get_node("Item").connect("inspect_item", self, "_on_inspect_item")
+		
+func _on_inspect_item(slot_index):
+#	get the data from item-list.json file
+	var get_item = Inventory.inventory_list[slot_index]
+	var get_item_description = Inventory.item_data[get_item]["description"]
+	var get_item_texture = Inventory.item_data[get_item]["texture-path"]
+	
+	add_child(inspect_item_window)
+	get_tree().paused = true # set the panel Puse Mode to Process
+	
+	inspect_item_window.set_item_description(get_item, get_item_description, get_item_texture)
 	
 # Toggle button
 func _on_ToggleButton_toggled(button_pressed)-> void:
