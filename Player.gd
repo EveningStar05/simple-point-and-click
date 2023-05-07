@@ -7,9 +7,6 @@ var target = Vector2()
 var moving = false
 
 onready var animation_player = $AnimationPlayer
-
-func _ready():
-	animation_player.connect("animation_finished", self, "_on_animation_finished")
 	
 func _unhandled_input(event):
 	if event is InputEventMouseButton and event.is_action_pressed("click"):
