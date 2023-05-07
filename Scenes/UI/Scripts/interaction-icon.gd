@@ -4,6 +4,8 @@ onready var button = get_node("Icon/TextureButton")
 onready var interaction_node = get_node("Interaction")
 onready var tween = get_node("Tween")
 
+var show_icon = false
+
 export (String) var item_type = ""
 
 func _ready():
@@ -11,13 +13,14 @@ func _ready():
 	interaction_node.connect("body_entered", self, "_on_body_entered")
 	interaction_node.connect("body_exited", self, "_on_body_exited")
 	
-func _on_body_entered(_body):
+func _on_body_entered(body):
 	$Icon.show()
+	button.disabled = false
 	play_tween(button, "modulate", Color(1, 1, 1, 0), Color(1, 1, 1, 1), 0.5)
-	
+
 func _on_body_exited(_body):
+	button.disabled = true
 	play_tween(button, "modulate", Color(1, 1, 1, 1), Color(1, 1, 1, 0), 0.2)
-	$Icon.hide()
 	
 func play_tween(object, property, init_val, final_val, duration):
 	tween.interpolate_property(object, property, init_val, final_val, duration, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
@@ -26,7 +29,7 @@ func play_tween(object, property, init_val, final_val, duration):
 	
 func _on_button_pressed():
 	match item_type:
-		"view":
+		"view": # signpost
 			Global.emit_signal("start_dialog", get_name())
 		"pickable":
 			Inventory.add_item(self)

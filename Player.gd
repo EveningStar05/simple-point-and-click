@@ -8,7 +8,6 @@ var moving = false
 
 onready var camera2d = $Camera2D
 onready var animation_player = $AnimationPlayer
-
 	
 func _unhandled_input(event):
 	if event is InputEventMouseButton and event.is_action_pressed("click"):

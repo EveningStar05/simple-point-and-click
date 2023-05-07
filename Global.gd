@@ -2,4 +2,7 @@ extends Node
 
 # signal for dialog box
 signal start_dialog(item_name)
-var dialog_start = false
+var dialog_finished = false
+var dialog_index = 0
+
+var dialog_data = {}
