@@ -6,8 +6,10 @@ var destination = null
 var target = Vector2()
 var moving = false
 
-onready var camera2d = $Camera2D
 onready var animation_player = $AnimationPlayer
+
+func _ready():
+	animation_player.connect("animation_finished", self, "_on_animation_finished")
 	
 func _unhandled_input(event):
 	if event is InputEventMouseButton and event.is_action_pressed("click"):
@@ -27,3 +29,13 @@ func _physics_process(delta):
 		scale.x = scale.y * -1
 	elif target.x > position.x:
 		scale.x = scale.y * 1
+		
+	play_animation()
+		
+func play_animation():
+	if moving:
+		animation_player.play("walk")
+	else:
+		animation_player.play("RESET") # I know what you're thinking, I could
+		# just use the .stop(true) but somehow the animation does not reset.
+		

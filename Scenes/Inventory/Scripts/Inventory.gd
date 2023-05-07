@@ -1,11 +1,5 @@
 extends Node
 
-#	TODO:
-#	Fix extend_slot
-#	Fix inspect item:
-#		create the panel
-#		fix the code.
-
 # Inventory features:
 # 1. Add item: players can add item to the inventory
 # 2. Craft item (update and remove): players can craft item within the inventory
@@ -34,7 +28,7 @@ func add_item(item_name: StaticBody2D) -> void:
 		inventory_list[itemIndex] = itemName # set the added item to the first slot
 	texture_path =  item_data[itemName]["texture-path"] # texture path for the added item
 	# checks for empty slot
-#	extend_inv()
+	extend_inv()
 
 #	# emit a signal and pass the item index and texture path
 	emit_signal("display_item_to_inventory", itemIndex, texture_path)

@@ -1,6 +1,7 @@
 extends Control
 
 var inspect_item_window = preload("res://Scenes/Inventory/Item_Description/Item-description-base.tscn").instance()
+var slot = preload("res://Scenes/Inventory/item-slot.tscn")
 
 # Nodes
 onready var main_node = get_parent() # World
@@ -13,9 +14,18 @@ onready var slot_item = get_tree().get_nodes_in_group("slots")
 
 func _ready():
 	panel.hide()
+	Inventory.connect("extend_slot", self, "_on_extend_slot")
 	for slots in slot_item:
 		slots.get_node("Item").connect("inspect_item", self, "_on_inspect_item")
-		
+
+func _on_extend_slot():
+	var new_slot = slot.instance()
+	gridcontainter.columns += 1
+	gridcontainter.add_child(new_slot)
+	
+	new_slot.add_to_group("slots")
+	new_slot.connect("inspect_item", self, "_on_inspect_item")
+	
 func _on_inspect_item(slot_index):
 #	get the data from item-list.json file
 	var get_item = Inventory.inventory_list[slot_index]

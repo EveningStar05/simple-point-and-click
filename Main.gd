@@ -1,5 +1,8 @@
 extends Node
 
+#	TODO:
+#	Add player animation 
+
 onready var player = get_node("Player")
 onready var canvas_layer = get_node("CanvasLayer")
 
