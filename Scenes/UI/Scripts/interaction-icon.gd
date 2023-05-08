@@ -13,7 +13,7 @@ func _ready():
 	interaction_node.connect("body_entered", self, "_on_body_entered")
 	interaction_node.connect("body_exited", self, "_on_body_exited")
 	
-func _on_body_entered(body):
+func _on_body_entered(_body):
 	$Icon.show()
 	button.disabled = false
 	play_tween(button, "modulate", Color(1, 1, 1, 0), Color(1, 1, 1, 1), 0.5)
