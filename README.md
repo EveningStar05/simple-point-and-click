@@ -17,3 +17,8 @@ In this project I used Area2d for the interactions. Players can interact with it
 Performing 2 actions:
 - add item to inventory: a plus icon will show up on top of the item, indicating that it is a pickable item.
 - signpost: a search icon will show up, if you click it a dialog will show up giving what the character thought of the item. (You can play around with the item description in json file.)
+
+
+https://user-images.githubusercontent.com/98946459/236841710-5df82192-ed28-45b6-a53c-61429d2f8d9b.mp4
+
+
