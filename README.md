@@ -11,12 +11,12 @@
 
 ## Description:
 
-This is an inventory and interaction system created with Godot engine, inspired by classic point and click games. The inventory system is from my previous project, which you can find here: https://github.com/EveningStar05/Inventory-System
+This is a game prototype of inventory and interaction system created with Godot engine, I tried to recreate the interaction from some of my favourite point and click adventure games that I've played before. (Detention, Lucid Dream (1 & 2), and Re:Turn: One Way Trip.)
 
-In this project I used Area2d for the interactions. Players can interact with items in the world, an icon will show up if the Player gets close enough to the item. 
-Performing 2 actions:
-- add item to inventory: a plus icon will show up on top of the item, indicating that it is a pickable item.
-- signpost: a search icon will show up, if you click it a dialog will show up giving what the character thought of the item. (You can play around with the item description in json file.)
+In this prototype I use Area2d for both character and items. The items (Static body) that is placed in the Main scene (world) detects when the character (Kinematic body) gets close enough to the item (or has entered another body, since I'm using Staticbody2d and Kinematicbody2d.). Then an icon will appear on top of the item, there are two types of interactions based on their icons:
+
+- circular plus icon: you can add this item to the inventory.
+- search icon: if you click on this icon a dialog box will appear, giving what the character though about the item being interacted with.
 
 
 https://user-images.githubusercontent.com/98946459/236841710-5df82192-ed28-45b6-a53c-61429d2f8d9b.mp4
