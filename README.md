@@ -16,8 +16,7 @@ This is a game prototype of inventory and interaction system created with Godot 
 In this prototype I use Area2d for both character and items. The items (Static body) that is placed in the Main scene (world) detects when the character (Kinematic body) gets close enough to the item (or has entered another body, since I'm using Staticbody2d and Kinematicbody2d.). Then an icon will appear on top of the item, there are two types of interactions based on their icons:
 
 - circular plus icon: you can add this item to the inventory.
-- search icon: if you click on this icon a dialog box will appear, giving what the character though about the item being interacted with.
-
+- search icon: if you click on this icon a dialog box with running text will appear which contains what the character's thought about the item being interacted with. For this I use json file simply because I'm used to working with it and it's much more easier.
 
 https://user-images.githubusercontent.com/98946459/236841710-5df82192-ed28-45b6-a53c-61429d2f8d9b.mp4
 
